@@ -21,3 +21,4 @@
 @keyframes glide-indicator{0%,100%{translate:0 0;opacity:.4}50%{translate:180% 0;opacity:1}}
 @media(max-width:600px){.garden-sprig{width:100px;height:180px;left:-45px;opacity:.35}.garden-sprig.sprig-right{right:-45px}.forever .garden-sprig{width:120px;height:220px;opacity:.3}.garden-halo{width:370px;height:370px}}
 @media(prefers-reduced-motion:reduce){.garden-sprig,.sprig-bloom,.garden-halo,.occasion-seal,.autoscroll-control i{animation:none}.occasion-paper:after{display:none}}
+.soundtrack-error{position:fixed;bottom:75px;right:18px;z-index:12;max-width:240px;padding:12px 16px;background:#fff9ed;color:#75462e;border:1px solid #b27a3e44;border-radius:12px;font-size:11px}

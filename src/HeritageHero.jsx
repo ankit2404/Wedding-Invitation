@@ -1,0 +1,6 @@
+import React from 'react';
+
+export default function HeritageHero({w}){
+ return <section className="heritage-hero" id="home" aria-label="Kirti and Shivam wedding invitation"><picture><source media="(max-width: 600px)" srcSet="/images/sunlit-heritage-mobile.webp"/><img className="heritage-art" src="/images/sunlit-heritage.webp" alt="Sunlit sandstone haveli with marigold garlands, brass bells and an ivory wedding courtyard" fetchPriority="high"/></picture><div className="heritage-light" aria-hidden="true"/><div className="heritage-motes" aria-hidden="true">{Array.from({length:10},(_,i)=><i key={i} style={{left:`${(i*31+9)%100}%`,top:`${(i*17+10)%80}%`,'--delay':`${-i*1.4}s`}}/>)}</div><div className="heritage-title"><span className="eyebrow">TOGETHER WITH OUR FAMILIES</span><h1>{w.bride}<i>&</i>{w.groom}</h1><div className="heritage-flourish" aria-hidden="true"><span/>❋<span/></div><p className="heritage-date">12 DECEMBER 2026</p><p className="heritage-location">Laxmi Nagar, Delhi <span>·</span> 8:00 PM</p><a href="#events" className="heritage-link">Celebrate with us <span>↓</span></a></div><div className="heritage-scroll" aria-hidden="true"><span>SCROLL FOR THE CELEBRATIONS</span><i/></div></section>
+}
+

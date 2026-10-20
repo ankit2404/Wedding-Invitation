@@ -1,0 +1,23 @@
+/* Slow, independent decorative movement leaves the reading surface stable. */
+.garden-sprig{position:absolute;left:-45px;top:45px;width:165px;height:290px;color:#788d56;pointer-events:none;opacity:.6;transform-origin:50% 100%;animation:garden-sway 10s ease-in-out infinite}
+.garden-sprig.sprig-right{left:auto;right:-45px;top:auto;bottom:50px;rotate:180deg;animation-delay:-5s}
+.forever .garden-sprig{width:210px;height:370px;opacity:.45;color:#967c36}
+.finale .garden-sprig{opacity:.45;color:#8b7246}
+.sprig-bloom{transform-box:fill-box;transform-origin:center;animation:bloom-breathe 8s ease-in-out infinite}
+.garden-halo{position:absolute;left:50%;top:50%;width:650px;height:650px;border:1px solid #a5883e33;border-radius:50%;translate:-50% -50%;pointer-events:none;box-shadow:0 0 0 26px #fff7d21f,0 0 0 27px #a5883e15,0 0 0 70px #fff7d215;animation:halo-breathe 12s ease-in-out infinite}
+.forever>.reveal,.finale>h2,.finale>p,.finale-actions{position:relative}
+.occasion-seal{animation:seal-float 6s ease-in-out infinite}
+.occasion:nth-child(2) .occasion-seal{animation-delay:-2s}.occasion:nth-child(3) .occasion-seal{animation-delay:-4s}
+.occasion-paper:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 20%,#fff9e85c 45%,transparent 65%);background-size:300% 100%;opacity:0;transition:opacity .6s}
+.occasion:hover .occasion-paper:after{opacity:.5;animation:paper-light 3s ease-out both}
+.autoscroll-control i{width:35%;animation:glide-indicator 3s ease-in-out infinite;border-radius:3px}
+.petals i{animation-duration:calc(var(--duration) * 1.7)}
+.type-reveal{transition-duration:1.4s}
+@keyframes garden-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes bloom-breathe{50%{scale:1.07}}
+@keyframes halo-breathe{50%{scale:1.08;opacity:.65}}
+@keyframes seal-float{50%{transform:translateY(-3px) rotate(5deg)}}
+@keyframes paper-light{from{background-position:100% 0}to{background-position:0 0}}
+@keyframes glide-indicator{0%,100%{translate:0 0;opacity:.4}50%{translate:180% 0;opacity:1}}
+@media(max-width:600px){.garden-sprig{width:100px;height:180px;left:-45px;opacity:.35}.garden-sprig.sprig-right{right:-45px}.forever .garden-sprig{width:120px;height:220px;opacity:.3}.garden-halo{width:370px;height:370px}}
+@media(prefers-reduced-motion:reduce){.garden-sprig,.sprig-bloom,.garden-halo,.occasion-seal,.autoscroll-control i{animation:none}.occasion-paper:after{display:none}}

@@ -41,3 +41,8 @@ Readability updates use darker text and larger small-text sizes. Checked program
 
 ## Selected song
 Din Shagna Da, YouTube video 1LVpuWpRs3I. The music control links to the original YouTube song in a new tab. Both standard and privacy-enhanced YouTube embeds returned "This video is unavailable" during verification, although the original watch page opened. The app therefore uses the direct link rather than a broken embedded player. No audio was extracted or downloaded. To use a permitted local audio recording instead, clear musicYouTubeId and set musicUrl to the audio asset URL. The original synthesized soundtrack remains the fallback only when both fields are empty.
+
+## Scroll experience update
+The invitation now adapts visual interaction ideas from the Squarespace homepage while keeping Sunlit Heritage artwork and the existing event programme. src/ScrollExperience.jsx and src/experience.css add a scroll-responsive hero image frame, editorial invitation typography with staggered movement, a pinned three-chapter image reveal (engagement, rituals, wedding), reading progress, and venue artwork moving independently of its text. Wheel, touch, keyboard and anchor scrolling remain native; scroll position is never intercepted or rewritten. RequestAnimationFrame batches updates and cleanup removes event listeners and the ResizeObserver. Reduced-motion preferences show a static scene and readable text. No Squarespace source code or assets were copied.
+
+Verified in-browser: desktop chapter progression and image masks; 390px mobile viewport without horizontal overflow; portrait image selection; wedding ceremony details still expand. The selected song remains a link to Din Shagna Da on YouTube. Production build passes.

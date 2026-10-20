@@ -3,13 +3,16 @@ import { wedding as w } from './config';
 import HeritageHero from './HeritageHero';
 import CeremonySchedule from './CeremonySchedule';
 import WeddingMusic from './WeddingMusic';
-import { Rings, LoveNote, Ribbon } from './Motion';
+import { LoveNote, Ribbon } from './Motion';
+import { useScrollExperience, EditorialInvitation, CelebrationScenes } from './ScrollExperience';
 import './wedding.css';
 import './celebrations.css';
 import './heritage.css';
 import './schedule.css';
+import './experience.css';
 
 export default function App(){
+ useScrollExperience();
  const [now,setNow]=useState(Date.now()),[toast,setToast]=useState('');
  const title=`${w.bride} & ${w.groom}`;
  useEffect(()=>{document.title=`${title} • A December Wedding`;const timer=setInterval(()=>setNow(Date.now()),1000);return()=>clearInterval(timer)},[title]);
@@ -28,8 +31,9 @@ export default function App(){
  }
  return <div className="invitation"><div className="grain"/>
  <main><HeritageHero w={w}/>
- <section className="invitation-note section reveal" id="celebration"><div className="note-side" aria-hidden="true">❧</div><span className="eyebrow">TWO FAMILIES. ONE BEAUTIFUL BEGINNING.</span><h2>A little tradition.<br/>A lot of <em>love.</em></h2><p>With the blessings of our families and love in our hearts, we invite you to celebrate our engagement and wedding. Come for the rituals, stay for the laughter, and help us make memories for a lifetime.</p><Rings/><div className="note-side right" aria-hidden="true">❧</div></section>
+ <EditorialInvitation/>
  <div className="date-strip"><a href="#engagement"><span>THE ENGAGEMENT</span><strong>06 <i>DEC</i></strong><small>Sunday · 2:00 PM</small></a><span className="strip-star" aria-hidden="true">✧</span><a href="#wedding"><span>THE WEDDING</span><strong>12 <i>DEC</i></strong><small>Saturday · 8:00 PM</small></a></div>
+ <CelebrationScenes/>
  <CeremonySchedule events={w.events} onCalendar={calendar}/>
  <section className="count-section section reveal"><span className="eyebrow">{left?'THE EXCITEMENT IS COUNTING UP':'OUR BEAUTIFUL BEGINNING'}</span><h2>{left?'Until we say':'A day to'} <em>{left?'forever.':'remember.'}</em></h2><div className="countdown">{counts.map((n,i)=><div key={i}><strong key={n}>{String(n).padStart(2,'0')}</strong><span>{['DAYS','HOURS','MINUTES','SECONDS'][i]}</span></div>)}</div><button className="text-button" onClick={()=>calendar()}>Add the wedding to your calendar <span>↗</span></button></section>
  <section className="venue-section section" id="details"><div className="venue-visual reveal"><div className="venue-photo" role="img" aria-label="Illustrated Indian palace wedding courtyard"/><span className="venue-photo-note">A celebration to remember</span></div><div className="venue-copy reveal"><span className="eyebrow">A PLACE IN OUR CELEBRATION</span><h2>Meet us where<br/>the magic <em>begins.</em></h2><div className="venue-address"><span>WEDDING · 12 DECEMBER · 8:00 PM</span><h3>{w.venue||w.address}</h3><p>{w.venue?w.address:'Exact wedding venue details will be shared soon.'}</p></div><a className="primary" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([w.venue,w.address].filter(Boolean).join(', '))}`} target="_blank" rel="noreferrer">{w.venue?'Get directions':'Explore the area'} <span>↗</span></a><p className="engagement-venue">Engagement · 6 December · 2:00 PM<br/>Venue to be announced</p></div></section>

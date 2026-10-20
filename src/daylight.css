@@ -1,0 +1,58 @@
+:root{background:#fffaf0;color:#354936;--pink:#bb4e36}
+.midnight{background:#fffaf0}
+.navigation{color:#713e2c;border-color:#83502e20}
+nav button{border-color:#83502e55;background:#fff9ed9c}
+.hero{background:#f9e6c7;color:#713e2c}
+.hero-art{background-image:url('/images/sunlit-heritage.webp')}
+.hero-shade{background:linear-gradient(#fff9efb8 0%,#fff8eb70 40%,#fff6e115 60%,#fff4dedb 100%)}
+.hero-topline,.hero-title .eyebrow{color:#74462e}
+.hero h1{text-shadow:0 2px 35px #fff8e5aa}
+.hero h1 em,.hero-caption i{color:#b34e35}
+.hero-bottom{color:#553524}.date-lockup p{color:#553524}
+.round-link b{border-color:#a75b3b99;background:#fff9eb80}
+.petals i{background:#e98955}
+.ticker{background:#f3c953;color:#4c431f}
+.intro-side .eyebrow,.tiny{color:#707859}
+.intro p,.details-copy>p,.address p,.details-copy>small{color:#64715b}
+.intro .intro-sign{color:#a84630}
+.intro h2 em{color:#71834e}.orbit-flower{color:#d07643}
+.celebrations{background:#f2f0dd;color:#354936;position:relative}
+.celebrations:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.25;background-image:radial-gradient(#a2ae802e 1px,transparent 1px);background-size:7px 7px}
+.section-heading{position:relative}.section-heading>p{color:#637052}
+.section-heading h2 em{color:#a84d38}
+.celebration-tickets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start;padding:30px 0 25px}
+.occasion{--ink:#9b4736;--paper:#fff6e7;--back:#edb3a1;position:relative;color:var(--ink);padding:9px;background:var(--back);box-shadow:0 18px 35px #65502e14;transform:rotate(-2deg);transition:transform .5s,box-shadow .5s;border-radius:7px}
+.occasion:before{content:"";position:absolute;inset:6px -5px -7px 5px;background:var(--back);z-index:-1;border-radius:7px;transform:rotate(2deg)}
+.occasion-wedding{--ink:#46613f;--paper:#fffff1;--back:#a8bc86;transform:translateY(-23px) rotate(1deg)}
+.occasion-dinner{--ink:#8e5b24;--paper:#fff9e6;--back:#e8c66c;transform:rotate(2deg)}
+.occasion:hover{transform:translateY(-12px) rotate(0);box-shadow:0 28px 40px #65502e24}
+.occasion-paper{border:1px solid currentColor;background:var(--paper);position:relative;text-align:center;padding:22px 23px 45px;min-height:640px;display:flex;flex-direction:column;align-items:center;background-image:radial-gradient(#a8865520 .6px,transparent .6px);background-size:4px 4px}
+.occasion-paper:before{content:"";position:absolute;inset:6px;border:1px solid currentColor;opacity:.25;pointer-events:none}
+.occasion-top{width:100%;display:flex;justify-content:space-between;align-items:center;font-size:7px;letter-spacing:1.4px}
+.occasion-top>span:last-child{font-size:17px}
+.occasion-illustration{width:100%;max-width:220px;margin:20px auto 5px;transition:transform .7s}
+.occasion:hover .occasion-illustration{transform:translateY(-5px)}
+.occasion-illustration svg{display:block;width:100%;height:auto}
+.occasion-script{font:italic 20px 'Cormorant Garamond',serif;margin-top:2px}
+.occasion h3{font:500 clamp(33px,3.1vw,49px)/1 'Cormorant Garamond',serif;letter-spacing:-1.6px;margin:16px 0 18px;max-width:220px;min-height:88px;display:flex;align-items:center}
+.occasion-description{font-size:11px;line-height:1.85;margin:0 auto 25px;max-width:235px;min-height:65px}
+.occasion-date{display:flex;align-items:center;gap:13px;border-top:1px solid #9e855b44;border-bottom:1px solid #9e855b44;padding:16px 0;width:100%;justify-content:center;margin-top:auto}
+.occasion-date strong{font:500 53px/.9 'Cormorant Garamond',serif;letter-spacing:-2px}
+.occasion-date>div{display:flex;flex-direction:column;text-align:left;gap:7px}
+.occasion-date span{font-size:8px;letter-spacing:1px}.occasion-date span+span{font-size:7px;letter-spacing:.2px;line-height:1.6}
+.occasion-location{display:flex;flex-direction:column;gap:8px;margin-top:20px;font-size:10px}
+.occasion-location .location-label{font-size:7px;letter-spacing:2px}
+.occasion-location small{font-size:8px;opacity:.8}
+.occasion-location a{border-bottom:1px solid currentColor;padding:5px;position:relative;z-index:1}
+.occasion-seal{position:absolute;bottom:-28px;left:calc(50% - 26px);width:52px;height:52px;display:grid;place-items:center;border-radius:50%;background:var(--ink);color:var(--paper);font:italic 19px 'Cormorant Garamond',serif;box-shadow:0 3px 0 #0002,inset 0 0 0 4px #ffffff22;border:3px double var(--paper)}
+.forever{background:#f8d77a;color:#574a28}.forever h2 em{color:#9b4930}.forever-rings{opacity:.4}.forever-rings i{border-color:#9f7b31}.countdown>div{border-color:#765c3229}.countdown span{color:#705f3d}
+.pill-button{background:#a74732;color:#fff9ec;border-color:#a74732}.pill-button:hover{background:#853b2c}
+.location-art{background:#e3e9c7;color:#456044}.address{border-color:#50663e33}.address>span{color:#a54d32}
+.finale{background:#f3b49a;color:#673f2d}.finale .pill-button{background:#476044;color:#fff9e9}.share-button{border-color:#673f2d55}footer{border-color:#673f2d33}
+.music-pill{background:#fff9edeF;color:#75462e;border-color:#b27a3e44}.music-pill>span:first-child{color:#a64731}
+.entrance span{background:#fff4d9}.notice{background:#476044;color:#fff9e9}
+@media(min-width:1400px){.occasion-paper{min-height:670px}.occasion h3{font-size:50px}}
+@media(max-width:1000px){.celebration-tickets{gap:20px}.occasion-paper{padding:20px 15px 43px}.occasion h3{font-size:35px}.occasion-date{gap:8px}.occasion-date span{font-size:7px}.occasion-date strong{font-size:43px}}
+@media(max-width:760px){.celebration-tickets{grid-template-columns:1fr;gap:65px;max-width:410px;margin:auto;padding:15px 12px 25px}.occasion-paper{min-height:0;padding:25px 30px 44px}.occasion h3{font-size:47px;min-height:0;max-width:240px}.occasion-description{font-size:12px;min-height:0;max-width:270px}.occasion-illustration{max-width:210px;margin-top:14px}.occasion-wedding{transform:rotate(1.5deg)}.occasion-date{margin-top:0;padding:17px 0;gap:15px}.occasion-date strong{font-size:57px}.occasion-date span{font-size:9px}.occasion-date span+span{font-size:8px}.occasion-location{font-size:12px}.occasion-location small{font-size:10px}.occasion-top{font-size:8px}.occasion-script{font-size:23px}}
+@media(max-width:600px){.hero-art{background-image:url('/images/sunlit-heritage-mobile.webp');inset:-2% -10%;background-position:center}.hero-shade{background:linear-gradient(#fff9efbb,#fff8eb40 50%,#fff4deec)}.hero h1 em{color:#b34e35}.hero-title{margin-top:27px}.hero-caption{color:#6c3d2b}.hero-bottom{background:#fff9e5a6;border-radius:8px;padding:12px;margin:0 -8px}.hero{padding-bottom:88px}.occasion-paper{padding-left:25px;padding-right:25px}}
+@media(prefers-reduced-motion:reduce){.occasion,.occasion:hover{transform:none}}
